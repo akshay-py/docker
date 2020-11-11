@@ -52,7 +52,7 @@
 				<groupId>org.springframework.boot</groupId>
 				<artifactId>spring-boot-maven-plugin</artifactId>
 				<configuration>
-					<finalName>user-mysql</finalName>
+					<finalName>transaction-mysql</finalName>
 				</configuration>
 			</plugin>
 		</plugins>

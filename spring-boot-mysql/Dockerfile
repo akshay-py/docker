@@ -1,4 +1,4 @@
-FROM openjdk:12
-ADD target/user-mysql.jar user-mysql.jar
-EXPOSE 8089
-ENTRYPOINT ["java", "-jar", "user-mysql.jar"]
+FROM openjdk:11
+ADD target/transaction-mysql.jar transaction-mysql.jar
+EXPOSE 8089 8000
+CMD java -jar transaction-mysql.jar
