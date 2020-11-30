@@ -1,0 +1,12 @@
+docker build -t akshaypy/spring-boot-jar:latest .
+
+docker image push akshaypy/spring-boot-jar:latest
+
+kubectl create deployment spring-boot-jar --image=akshaypy/spring-boot-jar:latest --dry-run=client -o=yaml > deployment.yaml
+
+kubectl create service clusterip spring-boot-jar --tcp=8080:8080 --dry-run=client -o=yaml >> service.yaml
+
+kubectl apply -f deployment.yaml
+kubectl apply -f service.yaml
+
+kubectl port-forward svc/spring-boot-jar 8080:8080
