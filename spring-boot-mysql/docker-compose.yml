@@ -46,7 +46,7 @@ services:
 
     restart: on-failure
 
-    build: ./
+    container_name: transaction-mysql
     
     image: akshaypy/transaction-mysql:latest
 
